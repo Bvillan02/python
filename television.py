@@ -16,7 +16,7 @@ class Television:
             self.__muted = False
 
     def mute(self):
-        #FIX ME
+        #Fix ME
         if self.__status:
             self.__muted = not self.__muted
 
