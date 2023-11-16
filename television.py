@@ -34,7 +34,6 @@ class Television:
             else:
                 self.__channel = Television.MIN_CHANNEL
 
-
     def channel_down(self) -> None:
         """
         Method to decrease television channel
@@ -44,7 +43,6 @@ class Television:
                 self.__channel = self.__channel - 1
             else:
                 self.__channel = Television.MAX_CHANNEL
-
 
     def volume_up(self) -> None:
         """
