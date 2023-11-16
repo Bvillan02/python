@@ -5,10 +5,6 @@ class Television:
     MIN_CHANNEL = 0
     MAX_CHANNEL = 3
 
-# overall, it was pretty accurate. you just had some logic issues in the volume functions
-# You were also missing some "-> None" in your functions (it doesn't affect the code,
-    # it's just for documentation purposes)
-
     def __init__(self) -> None:
         self.__status = False
         self.__muted = False
@@ -43,7 +39,6 @@ class Television:
         """
         Method to decrease television channel
         """
-        # You had an extra if self.__status here and it wasn't needed
         if self.__status:
             if self.__channel > Television.MIN_CHANNEL:
                 self.__channel = self.__channel - 1
@@ -55,7 +50,6 @@ class Television:
         """
         Method to turn television volume up
         """
-        # You had a logic issue here that was messing up the Volume output
         if self.__status:
             self.__muted = False
             if self.__volume < Television.MAX_VOLUME:
@@ -65,14 +59,11 @@ class Television:
         """
         Method to turn television volume down
         """
-        # You had a logic issue here that was messing up the Volume output
         if self.__status:
             self.__muted = False
             if self.__volume > Television.MIN_VOLUME:
                 self.__volume = self.__volume - 1
 
-# you forgot to add "-> str" to specify that the return value will be a string. as previously mentioned, it doesn't
-# affect the code
     def __str__(self) -> str:
         """
         Method to show television status
